@@ -25,7 +25,8 @@ function newColorDiv(setRed, setGreen, setBlue){
     let color = `rgb(${setRed},${setGreen},${setBlue})`;
 
     divColor.style.background = color;
-    hexaColor.textContent = "#" + hexa(parseInt(setRed)) + hexa(parseInt(setGreen)) + hexa(parseInt(setBlue));
+    hexaColor.textContent = "#" + hexa(parseInt(setRed)) 
+    + hexa(parseInt(setGreen)) + hexa(parseInt(setBlue));
     if(setRed < 100 || setGreen < 100 || setBlue < 100){
         hexaColor.style.color = 'white';
     } else {
@@ -43,7 +44,7 @@ function newColorDiv(setRed, setGreen, setBlue){
 }
 
 function render(){
-    rangeR.addEventListener('change', setValueAtField);
-    rangeG.addEventListener('change', setValueAtField);
-    rangeB.addEventListener('change', setValueAtField);
+    rangeR.addEventListener('input', setValueAtField);
+    rangeG.addEventListener('input', setValueAtField);
+    rangeB.addEventListener('input', setValueAtField);
 }
